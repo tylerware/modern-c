@@ -1,0 +1,10 @@
+#+TITLE: Modern C
+
+* Project
+Set up the project:
+#+BEGIN_SRC bash
+cd ~/Projects
+git clone https://github.com/tylerware/modern-c.git
+#+END_SRC
+
+#+RESULTS:
