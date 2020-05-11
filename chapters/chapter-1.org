@@ -1,0 +1,50 @@
+#+TITLE: Chapter 1 - Getting started!
+
+[[pdf:../ModernC.pdf::11][Chapter 1]]
+
+* Getting started
+:PROPERTIES:
+:header-args: :dir ../src
+:END:
+** Source
+#+BEGIN_SRC c :tangle ../src/getting-started.c
+#include <stdlib.h>
+#include <stdio.h>
+
+/* The main thing that this program does. */
+int main(void) {
+    // Declarations
+    double A[5] = {
+        [0] = 9.0,
+        [1] = 2.9,
+        [4] = 3.E+25,
+        [3] = .00007,
+    };
+
+    // Doing some work
+    for (size_t i = 0; i < 5; i++) {
+        printf("element %zu is %g, \tits square is %g\n",
+               i,
+               A[i],
+               A[i]*A[i]);
+    }
+
+    return EXIT_SUCCESS;
+}
+#+END_SRC
+** Compile it
+#+BEGIN_SRC bash
+gcc getting-started.c -o ../build/getting-started
+#+END_SRC
+** Run it
+#+BEGIN_SRC bash
+../build/getting-started
+#+END_SRC
+
+#+RESULTS:
+| element 0 is 9,     | its square is 81      |
+| element 1 is 2.9,   | its square is 8.41    |
+| element 2 is 0,     | its square is 0       |
+| element 3 is 7e-05, | its square is 4.9e-09 |
+| element 4 is 3e+25, | its square is 9e+50   |
+
