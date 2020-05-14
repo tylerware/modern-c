@@ -4,6 +4,7 @@
 I'm working through the book "Modern C", which you can get from [[https://modernc.gforge.inria.fr/][here]]. And this is the place I'm collecting the code examples and my thoughts as I work through the book. Probably pretty useless for anyone else, except me!
 * Chapters
 - [[file:chapters/chapter-1.org][1. Getting Started]]
+- [[file:chapters/chapter-2.org][2. The principal structure of a program]]
 * Setup
 Set up the project:
 #+BEGIN_SRC bash

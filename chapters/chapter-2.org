@@ -1,0 +1,4 @@
+#+TITLE: Chapter 2 - The principal structure of a program
+#+PROPERTY: header-args :dir ../src
+
+[[pdf:~/Projects/modern-c/ModernC.pdf::17++3.39][Chapter 2]]
