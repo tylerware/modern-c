@@ -1,11 +1,9 @@
 #+TITLE: Chapter 1 - Getting started!
+#+PROPERTY: header-args :dir ../src
 
 [[pdf:../ModernC.pdf::11][Chapter 1]]
 
-* Getting started
-:PROPERTIES:
-:header-args: :dir ../src
-:END:
+* Listing 1.1
 ** Source
 #+BEGIN_SRC c :tangle ../src/getting-started.c
 #include <stdlib.h>
@@ -47,4 +45,47 @@ gcc getting-started.c -o ../build/getting-started
 | element 2 is 0,     | its square is 0       |
 | element 3 is 7e-05, | its square is 4.9e-09 |
 | element 4 is 3e+25, | its square is 9e+50   |
+* Listing 2.1
+** Source
+#+BEGIN_SRC c :tangle ../src/getting-started-flawed.c
 
+/* The main thing that this program does. */
+void main(void) {
+    // Declarations
+    int i;
+    double A[5] = {
+        9.0,
+        2.9,
+        3.E+25,
+        .00007,
+    };
+
+    // Doing some work
+    for (i = 0; i < 5; i++) {
+        printf("element %d is %g, \tits square is %g\n",
+               i,
+               A[i],
+               A[i]*A[i]);
+    }
+
+    return 0;
+}
+#+END_SRC
+** Compile it
+#+BEGIN_SRC bash
+gcc getting-started-flawed.c -o ../build/getting-started-flawed
+#+END_SRC
+
+#+RESULTS:
+
+** Run it
+#+BEGIN_SRC bash
+../build/getting-started
+#+END_SRC
+
+#+RESULTS:
+| element 0 is 9,     | its square is 81      |
+| element 1 is 2.9,   | its square is 8.41    |
+| element 2 is 0,     | its square is 0       |
+| element 3 is 7e-05, | its square is 4.9e-09 |
+| element 4 is 3e+25, | its square is 9e+50   |
