@@ -1,0 +1,4 @@
+#+TITLE: Chapter 3 - Everything is about control
+#+PROPERTY: header-args :dir ../src
+
+[[pdf:~/Projects/modern-c/ModernC.pdf::30++3.39][Chapter 3]]
